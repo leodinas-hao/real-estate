@@ -3,3 +3,11 @@ GET https://investor-api.realestate.com.au/states/VIC/suburbs/BOX%20HILL/postcod
 ###
 
 GET https://investor-api.realestate.com.au/states/NSW/suburbs/SYDNEY/postcodes/2000.json
+
+###
+
+GET https://suggest.realestate.com.au/smart-suggest
+    ?query=3128
+    &n=1
+    &regions=false
+    &src=rui
