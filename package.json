@@ -9,9 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "3.5.1",
+    "cli-table2": "0.2.0",
     "json2csv": "4.0.2",
     "lodash": "4.17.5",
     "request": "2.85.0",
     "yargs": "11.0.0"
+  },
+  "devDependencies": {
+    "@types/bluebird-global": "3.5.5",
+    "@types/lodash": "4.14.104",
+    "@types/request": "2.47.0",
+    "@types/yargs": "11.0.0",
+    "typescript": "2.7.2"
   }
 }
