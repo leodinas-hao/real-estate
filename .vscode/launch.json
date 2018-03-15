@@ -11,17 +11,20 @@
       "name": "Mocha Tests",
       "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
       "args": [
+        "--require",
+        "ts-node/register",
         "-u",
         "tdd",
         "--no-timeouts",
         "--colors",
-        "--require",
-        "ts-node/register",
-        "${workspaceRoot}/src/**/*.spec.ts"
+        "${relativeFile}"
+        // "${workspaceRoot}/src/**/*.spec.ts"
       ],
-      "internalConsoleOptions": "openOnSessionStart",
-      "console": "integratedTerminal"
+      "internalConsoleOptions": "openOnSessionStart"
     }
   ]
 }

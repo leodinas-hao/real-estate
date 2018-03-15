@@ -13,4 +13,13 @@ class SearchSuburbTest {
     assert.isArray(results);
     assert.isAtLeast(results.length, 1);
   }
+
+  @test('search Unknown')
+  public async searchUnknown() {
+    const term = 'unknown';
+    const results = await searchSuburb(term);
+    assert.isNotNull(results);
+    assert.isArray(results);
+    assert.isEmpty(results);
+  }
 }
