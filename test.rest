@@ -6,6 +6,10 @@ GET https://investor-api.realestate.com.au/states/NSW/suburbs/SYDNEY/postcodes/2
 
 ###
 
+GET https://investor-api.realestate.com.au/states/VIC/suburbs/SOMETHING/postcodes/0000.json
+
+###
+
 GET https://suggest.realestate.com.au/smart-suggest
     ?query=3128
     &n=1

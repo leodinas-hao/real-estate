@@ -28,13 +28,4 @@ export const defaults = {
       strictSSL: false,
     },
   },
-  options: {
-    suburbs: [{
-      state: 'VIC',
-      name: 'BOX HILL',
-      postcode: '3128',
-    }],
-    propertyType: 'HOUSE',
-    bedrooms: 'ALL',
-  },
 };

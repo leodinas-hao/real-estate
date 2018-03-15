@@ -3,7 +3,7 @@ import * as Request from 'request';
 
 import { defaults, Suburb } from './defaults';
 
-export function searchSuburb(term: string, limit = 1): Promise<Suburb[]> {
+export function searchSuburb(term: string, limit?: number): Promise<Suburb[]> {
   const opts = _.merge({}, defaults.requests.search, { qs: { query: term, n: limit } });
 
   return new Promise<Suburb[]>((resolve, reject) => {
