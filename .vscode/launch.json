@@ -8,6 +8,22 @@
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
+      "name": "Debug",
+      "cwd": "${workspaceRoot}",
+      "runtimeArgs": [
+        "--nolazy",
+        "--require",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceRoot}/src/index.ts"
+      ],
+      "sourceMaps": true,
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
       "name": "Mocha Tests",
       "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",

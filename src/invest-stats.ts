@@ -22,7 +22,12 @@ export function investStats(
       if (err) {
         reject(err);
       } else {
-        resolve(_.merge({}, _.get(body, path), suburb));
+        const stats = _.get(body, path);
+        if (stats) {
+          resolve(_.merge(_.get(body, path), suburb));
+        } else {
+          resolve(undefined);
+        }
       }
     });
   });

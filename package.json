@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "ts-node ./src/index.ts",
     "test": "mocha --inspect=5858 --colors --no-timeouts --require ts-node/register ./src/**/*.spec.ts"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "dependencies": {
     "bluebird": "3.5.1",
     "cli-table2": "0.2.0",
+    "csvtojson": "1.1.9",
     "json2csv": "4.0.2",
     "lodash": "4.17.5",
     "request": "2.85.0",
