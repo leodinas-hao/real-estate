@@ -12,7 +12,7 @@ class InvestStatsTest {
       name: 'Box Hill',
       postcode: '3128',
     };
-    const stats = await investStats(suburb);
+    const stats = await investStats(suburb, 'UNIT', '2');
     assert.isNotNull(stats);
   }
 

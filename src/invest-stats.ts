@@ -9,12 +9,12 @@ export function investStats(
   bedrooms: '0' | '1' | '2' | '3' | '4' | '5+' | 'ALL' = 'ALL'): Promise<any> {
   // prepare params
   suburb.name = suburb.name.toUpperCase();  // upper case suburb name
-  const url = _.template(defaults.requests.stats.url)({
+  const url = _.template(defaults.investStats.url)({
     state: suburb.state,
-    name: encodeURIComponent(suburb.name),
+    suburb: encodeURIComponent(suburb.name),
     postcode: suburb.postcode,
   });
-  const opts = _.merge({}, defaults.requests.stats, { url });
+  const opts = _.merge({}, defaults.investStats, { url });
   const path = `${suburb.name}-${suburb.postcode}.property_types.${propertyType}.bedrooms.${bedrooms}.investor_metrics`;
 
   return new Promise<Suburb[]>((resolve, reject) => {
@@ -22,7 +22,7 @@ export function investStats(
       if (err) {
         reject(err);
       } else {
-        resolve(_.get(body, path));
+        resolve(_.merge({}, _.get(body, path), suburb));
       }
     });
   });

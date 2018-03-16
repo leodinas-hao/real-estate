@@ -8,24 +8,22 @@ export interface Suburb {
 }
 
 export const defaults = {
-  requests: {
-    search: { // request for searching suburbs
-      method: 'GET',
-      url: 'https://suggest.realestate.com.au/smart-suggest',
-      qs: {
-        query: undefined, // search term
-        n: 1,
-        regions: false,
-        src: 'rui',
-      },
-      json: true,
-      strictSSL: false,
+  searchSuburb: { // request for searching suburbs
+    method: 'GET',
+    url: 'https://suggest.realestate.com.au/smart-suggest',
+    qs: {
+      query: undefined, // search term
+      n: undefined, // number of returns
+      regions: false,
+      src: 'rui',
     },
-    stats: {  // request for getting investor stats
-      method: 'GET',
-      url: 'https://investor-api.realestate.com.au/states/${state}/suburbs/${name}/postcodes/${postcode}.json',
-      json: true,
-      strictSSL: false,
-    },
+    json: true,
+    strictSSL: false,
+  },
+  investStats: {  // request for getting investor stats
+    method: 'GET',
+    url: 'https://investor-api.realestate.com.au/states/${state}/suburbs/${suburb}/postcodes/${postcode}.json',
+    json: true,
+    strictSSL: false,
   },
 };
