@@ -15,3 +15,11 @@ GET https://suggest.realestate.com.au/smart-suggest
     &n=1
     &regions=false
     &src=rui
+
+###
+
+GET https://investor-api.realestate.com.au/states/VIC/suburbs/MELBOURNE/postcodes/3000/sold_trend_data.json
+
+###
+
+GET https://investor-api.realestate.com.au/states/VIC/suburbs/MELBOURNE/postcodes/3000/rental_trend_data.json
