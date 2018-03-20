@@ -23,3 +23,29 @@ GET https://investor-api.realestate.com.au/states/VIC/suburbs/MELBOURNE/postcode
 ###
 
 GET https://investor-api.realestate.com.au/states/VIC/suburbs/MELBOURNE/postcodes/3000/rental_trend_data.json
+
+###
+
+GET https://services.realestate.com.au/services/listings/search
+    ?query=%7B%22channel%22%3A%22sold%22%2C%22page%22%3A1%2C%22pageSize%22%3A200%2C%22sortType%22%3A%22sold-date-desc%22%2C%22localities%22%3A%5B%7B%22searchLocation%22%3A%22hoppers%20crossing%2C%20vic%203029%22%7D%2C%7B%22searchLocation%22%3A%22werribee%2C%20vic%203030%22%7D%5D%2C%22filters%22%3A%7B%22propertyTypes%22%3A%5B%22house%22%5D%2C%22surroundingSuburbs%22%3Afalse%2C%22excludeNoSalePrice%22%3Atrue%2C%22ex-under-contract%22%3Afalse%2C%22furnished%22%3Afalse%7D%7D
+
+#
+{
+  "channel": "sold",
+  "page": 1,
+  "pageSize": 200,
+  "sortType": "sold-date-desc",
+  "localities": [{
+    "searchLocation": "hoppers crossing, vic 3029"
+  }, {
+    "searchLocation": "werribee, vic 3030"
+  }],
+  "filters": {
+    "propertyTypes": ["house"],
+    "surroundingSuburbs": false,
+    "excludeNoSalePrice": true,
+    "ex-under-contract": false,
+    "furnished": false
+  }
+}
+#
