@@ -49,3 +49,10 @@ GET https://services.realestate.com.au/services/listings/search
   }
 }
 #
+
+###
+GET https://suggest.realestate.com.au/consumer-suggest/suggestions
+    ?max=7
+    &query=vic
+    &type=suburb%2Cprecinct%2Cregion%2Cstate%2Cpostcode
+    &src=homepage
